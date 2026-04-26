@@ -1,0 +1,23 @@
+{
+  "name": "e-commerce-app",
+  "version": "1.0.0",
+  "description": "Minimal MERN stack e-commerce-app app",
+  "main": "index.js",
+  "scripts": {
+    "install-all": "npm install && npm install --prefix server && npm install --prefix client",
+    "install-client": "npm install --prefix client",
+    "install-server": "npm install --prefix server",
+    "build-client": "npm run build --prefix client",
+    "build": "npm run build-client",
+    "start": "concurrently \"npm run start-server\" \"npm run start-client\"",
+    "start-client": "npm run dev --prefix client",
+    "start-server": "npm run dev --prefix server",
+    "start-prod": "npm start --prefix server"
+  },
+  "dependencies": {
+    "concurrently": "^8.2.2"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
